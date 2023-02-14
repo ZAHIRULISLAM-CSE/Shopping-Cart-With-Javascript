@@ -6,13 +6,19 @@ function getToSetValueToCaseField(isplus){
     else{
         totalCase= minusAction(totalCase,"total-case");
     }
-    const phnPrice=totalCase*59;
-    document.getElementById("case-total-price").innerText=phnPrice;
+    const casePrice=totalCase*59;
+    document.getElementById("case-total-price").innerText=casePrice;
+    return casePrice;
 }
 
 document.getElementById("btn-plus-case").addEventListener("click",function(){
-    getToSetValueToCaseField(true);
+   getToSetValueToCaseField(true);
+   setSubTotalTaxTotal();
 })
 document.getElementById("btn-minus-case").addEventListener("click",function(){
-    getToSetValueToCaseField(false);
+    setSubTotalTaxTotal();
 })
+
+//calculalating the subtotal
+// subTotal( caseTotalPrice);
+// console.log(caseTotalPrice);
