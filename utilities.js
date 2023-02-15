@@ -9,7 +9,14 @@ function plusAction(totalProduct,id){
     return totalProduct;
 }
 function minusAction(totalProduct,id){
-    totalProduct=totalProduct-1;
-   document.getElementById(id).value=totalProduct;
-   return totalProduct;
+   if(totalProduct>0){
+      totalProduct=totalProduct-1;
+      document.getElementById(id).value=totalProduct;
+      return totalProduct;
+   }
+   else{
+      alert("cant be negative ");
+      return totalProduct;
+   }
+    
 }

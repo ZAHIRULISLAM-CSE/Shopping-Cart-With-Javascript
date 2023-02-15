@@ -16,6 +16,7 @@ document.getElementById("btn-plus-case").addEventListener("click",function(){
    setSubTotalTaxTotal();
 })
 document.getElementById("btn-minus-case").addEventListener("click",function(){
+    getToSetValueToCaseField(false);
     setSubTotalTaxTotal();
 })
 
